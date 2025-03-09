@@ -1,6 +1,7 @@
 ﻿using BethanysPieShopAdmin.Models.Repositories;
 using BethanysPieShopAdmin.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using BethanysPieShopAdmin.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
@@ -10,6 +11,7 @@ namespace BethanysPieShopAdmin.Controllers
     {
         private readonly IPieRepository _repository;
         private readonly ICategoryRepository _categoryRepository;
+
         public PieController(IPieRepository repository, ICategoryRepository categoryRepository)
         {   
             _categoryRepository = categoryRepository;
@@ -25,14 +27,38 @@ namespace BethanysPieShopAdmin.Controllers
             var pie = await _repository.GetPieByIdAsync(id);
             return View(pie);
         }
-
-        public async Task<IActionResult> Add()
+        [HttpPost]
+        public async Task<IActionResult> Add(PieAddViewModel pieAddViewModel)
         {
+            if (ModelState.IsValid)
+            {
+                Pie pie = new()
+                {
+                    CategoryId = pieAddViewModel.Pie.CategoryId,
+                    ShortDescription = pieAddViewModel.Pie.ShortDescription,
+                    LongDescription = pieAddViewModel.Pie.LongDescription,
+                    Price = pieAddViewModel.Pie.Price,
+                    AllergyInformation = pieAddViewModel.Pie.AllergyInformation,
+                    ImageThumbnailUrl = pieAddViewModel.Pie.ImageThumbnailUrl,
+                    ImageUrl = pieAddViewModel.Pie.ImageUrl,
+                    InStock = pieAddViewModel.Pie.InStock,
+                    IsPieOfTheWeek = pieAddViewModel.Pie.IsPieOfTheWeek,
+                    Name = pieAddViewModel.Pie.Name,
+
+                };
+                await _repository.AddPieAsync(pie);
+                return RedirectToAction(nameof(Index));
+            }  
             var allCategories = await _categoryRepository.GetCategoryAsync();
+
             IEnumerable<SelectListItem> selectListItems = new SelectList(allCategories, "CategoryId", "Name", null);
-            PieAddViewModel pieAddViewModel = new() { Categories = selectListItems };
+            pieAddViewModel.Categories = selectListItems;
             return View(pieAddViewModel);
+        
+        
         }
+    
+
 
     }
 }

@@ -4050,23 +4050,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application (1)\\02\\demos\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
       "projectName": "BethanysPieShopAdmin",
-      "projectPath": "C:\\Users\\User\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application (1)\\02\\demos\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application (1)\\02\\demos\\Demo 3\\BethanysPieShopAdmin\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4075,7 +4075,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4092,9 +4091,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -4134,110 +4133,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"Azure.Identity\" 1.7.0 есть известная уязвимость https://github.com/advisories/GHSA-5mfx-4wcx-rv27 (уровень серьезности: высокий)",
-      "libraryId": "Azure.Identity",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"Azure.Identity\" 1.7.0 есть известная уязвимость https://github.com/advisories/GHSA-m5vv-6r4h-3vj9 (уровень серьезности: средний)",
-      "libraryId": "Azure.Identity",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"Azure.Identity\" 1.7.0 есть известная уязвимость https://github.com/advisories/GHSA-wvxc-855f-jvrv (уровень серьезности: средний)",
-      "libraryId": "Azure.Identity",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"Microsoft.Data.SqlClient\" 5.1.1 есть известная уязвимость https://github.com/advisories/GHSA-98g6-xh36-x2p7 (уровень серьезности: высокий)",
-      "libraryId": "Microsoft.Data.SqlClient",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"Microsoft.Extensions.Caching.Memory\" 8.0.0 есть известная уязвимость https://github.com/advisories/GHSA-qj66-m88j-hmgj (уровень серьезности: высокий)",
-      "libraryId": "Microsoft.Extensions.Caching.Memory",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"Microsoft.IdentityModel.JsonWebTokens\" 6.24.0 есть известная уязвимость https://github.com/advisories/GHSA-59j7-ghrg-fj52 (уровень серьезности: средний)",
-      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"System.Formats.Asn1\" 5.0.0 есть известная уязвимость https://github.com/advisories/GHSA-447r-wph3-92pm (уровень серьезности: высокий)",
-      "libraryId": "System.Formats.Asn1",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"System.IdentityModel.Tokens.Jwt\" 6.24.0 есть известная уязвимость https://github.com/advisories/GHSA-59j7-ghrg-fj52 (уровень серьезности: средний)",
-      "libraryId": "System.IdentityModel.Tokens.Jwt",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"System.Text.Json\" 8.0.0 есть известная уязвимость https://github.com/advisories/GHSA-8g4q-xg66-9fp4 (уровень серьезности: высокий)",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "У пакета \"System.Text.Json\" 8.0.0 есть известная уязвимость https://github.com/advisories/GHSA-hh2w-p6rv-4g7w (уровень серьезности: высокий)",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
