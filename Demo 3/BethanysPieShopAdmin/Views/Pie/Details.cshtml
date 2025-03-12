@@ -46,7 +46,7 @@
             <label asp-for="IsPieOfTheWeek"></label>
         </dt>
         <dd class="col-sm-10">
-            <input type="checkbox" checked="@Model.IsPieOfTheWeek" disabled />
+            <input type="checkbox" checked="@Model.IsPieOfTheWeek" disabled/>
         </dd>
         <dt class="col-sm-2">
             <label asp-for="InStock"></label>
@@ -75,22 +75,22 @@
                     {
                         <tr>
                             <td>
-                                @ingredient.Name
-                            </td>
-                            <td>
-                                @ingredient.Amount
-                            </td>
-                        </tr>
-                    }
-                </table>
-            </dd>
+                            @ingredient.Name
+                        </td>
+                        <td>
+                            @ingredient.Amount
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
         }
 
         <dt class="col-sm-2">
             <label asp-for="ImageThumbnailUrl"></label>
         </dt>
         <dd class="col-sm-10">
-            <img src="@Model.ImageThumbnailUrl" width="300" height="150" />
+            <img src="@Model.ImageThumbnailUrl" width="300" height="150"  />
         </dd>
         <dt class="col-sm-2">
             <label asp-for="ImageUrl"></label>

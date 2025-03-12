@@ -11,39 +11,39 @@ namespace BethanysPieShopAdmin.Models
         public string Name { get; set; } = string.Empty;
 
         [StringLength(100)]
-        [Display(Name= "Shoer Description")]
+        [Display(Name = "Short description")]
         public string? ShortDescription { get; set; }
 
+        [Display(Name = "Long description")]
         [StringLength(1000)]
-        [Display(Name = "Long Description")]
         public string? LongDescription { get; set; }
 
+        [Display(Name = "Allergy information")]
         [StringLength(1000)]
-        [Display(Name = "Allergy Information")]
         public string? AllergyInformation { get; set; }
 
-        [Display(Name= "Price")]
+        [Display(Name = "Price")]
         public decimal Price { get; set; }
 
         [Display(Name = "Image URL")]
         public string? ImageUrl { get; set; }
 
-        [Display(Name = "Image Thumbnail URL")]
+        [Display(Name = "Image thumbnail URL")]
         public string? ImageThumbnailUrl { get; set; }
 
-        [Display(Name = "Is Pie Of The Week")]
+        [Display(Name = "Is pie of the week?")]
         public bool IsPieOfTheWeek { get; set; }
 
-        [Display(Name = "Price")]
+        [Display(Name = "In stock?")]
         public bool InStock { get; set; }
 
-        [Display(Name = "Price")]
+        [Display(Name = "Category ID")]
         public int CategoryId { get; set; }
 
-        [Display(Name = "Price")]
+        [Display(Name = "Category")]
         public Category? Category { get; set; }
 
-        [Display(Name = "Price")]
+        [Display(Name = "Ingredients")]
         public ICollection<Ingredient>? Ingredients { get; set; }
     }
 }

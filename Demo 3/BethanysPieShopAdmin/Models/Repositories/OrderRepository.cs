@@ -1,26 +1,26 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace BethanysPieShopAdmin.Models.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        private readonly BethanysPieShopDbContext _context;
-        public OrderRepository(BethanysPieShopDbContext context)
+        private readonly BethanysPieShopDbContext _bethanysPieShopDbContext;
+
+        public OrderRepository(BethanysPieShopDbContext bethanysPieShopDbContext)
         {
-            _context = context;
+            _bethanysPieShopDbContext = bethanysPieShopDbContext;
         }
 
-        public async Task<IEnumerable<Order>> GetAllOrderWithDetailsAsync()
+        public async Task<IEnumerable<Order>> GetAllOrdersWithDetailsAsync()
         {
-           return await _context.Orders.Include(x=>x.OrderDetails).ThenInclude(od=>od.Pie).OrderBy(x=>x.OrderId).ToListAsync();
+            return await _bethanysPieShopDbContext.Orders.Include(o => o.OrderDetails).ThenInclude(od => od.Pie).OrderBy(o => o.OrderId).AsNoTracking().ToListAsync();
         }
 
-        public async Task<Order?> GetOrderDetails(int? id)
+        public async Task<Order?> GetOrderDetailsAsync(int? orderId)
         {
-            if(id != null)
+            if (orderId != null)
             {
-                var order = await _context.Orders.Include(x => x.OrderDetails).ThenInclude(od => od.Pie).OrderBy(x=>x.OrderId).Where(o => o.OrderId== id.Value).FirstOrDefaultAsync();
+                var order = await _bethanysPieShopDbContext.Orders.Include(o => o.OrderDetails).ThenInclude(od => od.Pie).OrderBy(o => o.OrderId).Where(o => o.OrderId == orderId.Value).AsNoTracking().FirstOrDefaultAsync();
 
                 return order;
             }

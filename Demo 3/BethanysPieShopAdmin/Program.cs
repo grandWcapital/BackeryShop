@@ -6,11 +6,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<BethanysPieShopDbContext>(options =>
+  options.UseSqlServer(builder.Configuration.GetConnectionString("BethanysPieShopDbContextConnection")));
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-builder.Services.AddDbContext<BethanysPieShopDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("BethanysPieShopDbContextConnection")));
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,13 +27,16 @@ if (!app.Environment.IsDevelopment())
 else
 {
     app.UseDeveloperExceptionPage();
+    app.UseMigrationsEndPoint();
 }
-using(var scope =app.Services.CreateScope())
- {
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<BethanysPieShopDbContext>();
-    DbInitializer.Seed(context);
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<BethanysPieShopDbContext>();
+    //context.Database.EnsureCreated();
+    DbInitializer.Seed(context);
 }
 
 app.UseHttpsRedirection();

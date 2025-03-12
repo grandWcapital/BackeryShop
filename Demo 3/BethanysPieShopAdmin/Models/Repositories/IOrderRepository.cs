@@ -2,7 +2,7 @@
 {
     public interface IOrderRepository
     {
-        Task<Order?> GetOrderDetails(int? id);
-        Task<IEnumerable<Order>> GetAllOrderWithDetailsAsync();
+        Task<Order?> GetOrderDetailsAsync(int? orderId);
+        Task<IEnumerable<Order>> GetAllOrdersWithDetailsAsync();
     }
 }

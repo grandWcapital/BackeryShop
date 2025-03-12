@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BethanysPieShopAdmin.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMigration : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -100,7 +100,7 @@ namespace BethanysPieShopAdmin.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderDetails",
+                name: "OrderLines",
                 columns: table => new
                 {
                     OrderDetailId = table.Column<int>(type: "int", nullable: false)
@@ -112,15 +112,15 @@ namespace BethanysPieShopAdmin.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderDetails", x => x.OrderDetailId);
+                    table.PrimaryKey("PK_OrderLines", x => x.OrderDetailId);
                     table.ForeignKey(
-                        name: "FK_OrderDetails_Orders_OrderId",
+                        name: "FK_OrderLines_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "OrderId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderDetails_Pies_PieId",
+                        name: "FK_OrderLines_Pies_PieId",
                         column: x => x.PieId,
                         principalTable: "Pies",
                         principalColumn: "PieId",
@@ -133,13 +133,13 @@ namespace BethanysPieShopAdmin.Migrations
                 column: "PieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_OrderId",
-                table: "OrderDetails",
+                name: "IX_OrderLines_OrderId",
+                table: "OrderLines",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_PieId",
-                table: "OrderDetails",
+                name: "IX_OrderLines_PieId",
+                table: "OrderLines",
                 column: "PieId");
 
             migrationBuilder.CreateIndex(
@@ -155,7 +155,7 @@ namespace BethanysPieShopAdmin.Migrations
                 name: "Ingredient");
 
             migrationBuilder.DropTable(
-                name: "OrderDetails");
+                name: "OrderLines");
 
             migrationBuilder.DropTable(
                 name: "Orders");

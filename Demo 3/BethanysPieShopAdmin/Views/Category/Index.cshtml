@@ -1,10 +1,11 @@
 ﻿@model CategoryListViewModel
+
 <h2>Categories</h2>
 <hr />
 
 @if (!Model.Categories.Any())
 {
-    <p>No results</p>
+    <tr><td colspan="3" class="text-center">No categories at this point</td></tr>
 }
 else
 {
@@ -24,10 +25,13 @@ else
                 <td>@category.DateAdded.Value.ToShortDateString()</td>
                 <td>
                     <a asp-action="Details" asp-route-id="@category.CategoryId">Details</a>
+                    <a asp-action="Edit" asp-route-id="@category.CategoryId">Edit</a>
                 </td>
-
             </tr>
         }
     </table>
 }
+<p>
+    <a class="btn btn-primary" asp-action="Add">Add new category</a>
+</p>
 

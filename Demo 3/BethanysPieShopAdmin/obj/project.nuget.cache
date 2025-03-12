@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pERJJwOsXl4=",
+  "dgSpecHash": "8lXpX7BADC8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application\\04\\demos\\Demo 5\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

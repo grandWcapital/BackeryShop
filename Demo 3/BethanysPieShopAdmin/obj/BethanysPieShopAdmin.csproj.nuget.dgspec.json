@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {}
+    "C:\\Users\\user\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application\\04\\demos\\Demo 5\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {
+    "C:\\Users\\user\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application\\04\\demos\\Demo 5\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application\\04\\demos\\Demo 5\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
         "projectName": "BethanysPieShopAdmin",
-        "projectPath": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application\\04\\demos\\Demo 5\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Demo 3\\BackeryShop\\Demo 3\\BethanysPieShopAdmin\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\asp-dot-net-core-6-ef-core-building-data-driven-application\\04\\demos\\Demo 5\\BethanysPieShopAdmin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

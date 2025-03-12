@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BethanysPieShopAdmin.Migrations
 {
     [DbContext(typeof(BethanysPieShopDbContext))]
-    [Migration("20250211153129_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20231220163617_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -160,7 +160,7 @@ namespace BethanysPieShopAdmin.Migrations
 
                     b.HasIndex("PieId");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderLines", (string)null);
                 });
 
             modelBuilder.Entity("BethanysPieShopAdmin.Models.Pie", b =>

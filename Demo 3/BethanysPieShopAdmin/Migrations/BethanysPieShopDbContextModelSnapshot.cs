@@ -157,7 +157,7 @@ namespace BethanysPieShopAdmin.Migrations
 
                     b.HasIndex("PieId");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderLines", (string)null);
                 });
 
             modelBuilder.Entity("BethanysPieShopAdmin.Models.Pie", b =>
